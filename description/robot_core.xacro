@@ -20,9 +20,25 @@
         <color rgba="0 0 0 1"/>
     </material>
 
+    <!-- Enlace Base-->
+
     <link name="base_link">
-        
+
     </link>
+
+
+    <!-- Enlace Base Footprint -->
+    <joint name="base_footprint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+    
+    <link name="base_footprint">
+
+    </link>
+
+    
 
     <!-- Descripción del chasis-->
     <joint name="chassis_joint" type="fixed">
