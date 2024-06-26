@@ -14,9 +14,11 @@ def generate_launch_description():
             executable='v4l2_camera_node',
             output='screen',
             parameters=[{
-                'image_size': [640,480],
+                'image_size': [640,400],
+                'pixel_format': 'YUYV',
+                'output_encoding': 'yuv422_yuy2',
                 'camera_frame_id': 'camera_link_optical',
-                'video_device': '/dev/ttyUSB0'
+                'video_device': '/dev/video2'
                 }]
     )
     ])
